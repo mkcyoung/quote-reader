@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block title %}
+    Lookup
+{% endblock %}
+<head>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="/static/styles.css" rel="stylesheet"/>
+  <title>Iquote</title>
+
+</head>
+
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">iQuote</a>
+    <a class="navbar-brand" href="/lookup">Lookup</a>
+</nav>
+
+<div class="container-fluid">
+    {% block body %}
+    <form action="/lookup" method="post">
+        <div class="form-group">
+            <select name="title">
+                {% for row in titles %}
+                    <option>
+                        {{ row[0] }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Lookup quotes</button>
+    </form>
+
+    {% endblock %}
+</div>
+
+</html>

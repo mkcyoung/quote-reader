@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <form action ="/quotes" method="post">
+        Image:<br>
+        <input type="file" name="image"><br>
+        Title of Book:<br>
+        <input type="text" name="title"><br>
+        Page number:<br>
+        <input type="text" name="page"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

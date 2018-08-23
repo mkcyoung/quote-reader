@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lookup
+{% endblock %}
+
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 6px;
+}
+th {
+    text-align: left;
+}
+</style>
+</head>
+
+{% block body %}
+<body>
+
+<h2> {{title}} </h2>
+
+<table style="width:100%">
+    <thead>
+        <!-- Establishing header columns -->
+        <tr>
+            <th>
+                Page
+            </th>
+            <th>
+                Quote
+            </th>
+        </tr>
+    </thead>
+    <!-- Begin looping of rows -->
+    {% for row in history %}
+    <tr>
+            <td>
+                {{ row[2] }}
+            </td>
+            <td>
+                {{ row[1] }}
+            </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+{% endblock %}

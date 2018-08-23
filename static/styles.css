@@ -1,0 +1,75 @@
+/* fill viewport, hide scroll bar */
+html, body
+{
+    height: 100%;
+    overflow: hidden;
+}
+
+/* ensure content is below navbar */
+div.container-fluid
+{
+    padding-top: 56px;
+}
+
+/* remove padding within container */
+div.container-fluid
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* fill viewport */
+div.container-fluid, div.row, div.col, div.jumbotron
+{
+    height: 100%;
+}
+
+
+/* remove padding within column */
+div.col
+{
+    padding: 0;
+}
+
+/* add padding around form */
+form
+{
+    padding: 15px;
+}
+
+/* right-align leftmost column in matrix */
+div.row:first-of-type td:first-child,
+div.row:first-of-type th:first-child
+{
+    text-align: right;
+}
+
+/* don't wrap rows in log */
+th
+{
+    white-space: nowrap;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
